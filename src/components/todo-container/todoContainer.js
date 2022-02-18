@@ -14,6 +14,7 @@ const TodoContainer = () => {
   const handleChange = (id) => {
     const todos = todoItems.map((item) => {
       if (item.id === id) {
+        /* eslint-disable no-param-reassign */
         item.completed = !item.completed;
       }
       return item;
