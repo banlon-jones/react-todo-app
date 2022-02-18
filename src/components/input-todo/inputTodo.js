@@ -1,18 +1,19 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 
 const InputTodo = (Props) => {
-  const [task, setTask] = useState("");
+  const { addItemProps } = Props;
+  const [task, setTask] = useState('');
   const handleOnChange = (e) => {
     setTask(e.target.value);
   };
   const handleSubmit = (e) => {
-    e.preventDefault()
-    Props.addItemProps(task);
-    setTask("");
+    e.preventDefault();
+    addItemProps(task);
+    setTask('');
   };
 
   return (
-    <div className='container'>
+    <div className="container">
       <form onSubmit={handleSubmit}>
         <input
           className="form-control form-control-lg"
@@ -20,7 +21,8 @@ const InputTodo = (Props) => {
           value={task}
           name="task"
           onChange={handleOnChange}
-          placeholder="Enter todo item"/>
+          placeholder="Enter todo item"
+        />
       </form>
     </div>
   );
