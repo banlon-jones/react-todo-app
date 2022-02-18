@@ -1,0 +1,10 @@
+.todo-item {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  padding: 8px 12px 2px 12px;
+}
+
+input {
+  padding: 8px;
+}

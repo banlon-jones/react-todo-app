@@ -1,0 +1,9 @@
+.header {
+  color: #ececec;
+  margin-top: 3%;
+}
+
+.header h1 {
+  font-size: 123px;
+  font-weight: bold;
+}
